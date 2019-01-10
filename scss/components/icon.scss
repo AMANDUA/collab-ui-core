@@ -5,8 +5,16 @@
 @import '../settings/icon';
 
 @include exports('cui-icon') {
-  .#{$icon__class} {
+  .#{$contrast-class},
+  .#{$contrast-class} .#{$dark-class} {
+    .#{$icon__class} {
     fill: inherit;
+    }
+  }
+  .#{$dark-class} {
+    .#{$icon__class} {
+      fill: $icon--white__fill;
+    }
   }
 }
 
